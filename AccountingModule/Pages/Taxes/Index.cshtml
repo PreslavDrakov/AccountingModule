@@ -1,0 +1,72 @@
+﻿@page
+@model AccountingModule.Pages.Taxes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax[0].ComputationValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax[0].IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax[0].TypeValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax[0].ScopeValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax[0].Amount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Tax) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComputationValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsActive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TypeValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ScopeValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

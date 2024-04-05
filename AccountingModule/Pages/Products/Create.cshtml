@@ -1,0 +1,72 @@
+﻿@page
+@model AccountingModule.Pages.Products.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product.Name" class="control-label"></label>
+                <input asp-for="Product.Name" class="form-control" />
+                <span asp-validation-for="Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.TypeValue" class="control-label"></label>
+                <select asp-for="Product.TypeValue" class="form-control">
+                    @foreach (ProductTypesEnum type in Enum.GetValues(typeof(ProductTypesEnum)))
+                    {
+                        <option value="@((int)type)">@type</option>
+                    }
+                </select>
+                <span asp-validation-for="Product.TypeValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.SalesPrice" class="control-label"></label>
+                <input asp-for="Product.SalesPrice" class="form-control" />
+                <span asp-validation-for="Product.SalesPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.CostPrice" class="control-label"></label>
+                <input asp-for="Product.CostPrice" class="form-control" />
+                <span asp-validation-for="Product.CostPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Product.CanBeSold" /> @Html.DisplayNameFor(model => model.Product.CanBeSold)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Product.CanBePurchased" /> @Html.DisplayNameFor(model => model.Product.CanBePurchased)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.CustomerTaxesID" class="control-label"></label>
+                <select asp-for="Product.CustomerTaxesID" class ="form-control" asp-items="ViewBag.CustomerTaxesID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.VendorTaxesID" class="control-label"></label>
+                <select asp-for="Product.VendorTaxesID" class ="form-control" asp-items="ViewBag.VendorTaxesID"></select>
+            </div>
+            <div class="form-group" style="padding-top: 10px;">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

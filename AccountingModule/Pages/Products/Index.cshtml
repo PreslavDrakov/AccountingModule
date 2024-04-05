@@ -1,0 +1,63 @@
+﻿@page
+@model AccountingModule.Pages.Products.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Sales price</th>
+            <th>Cost price</th>
+            <th>Can be sold</th>
+            <th>Can be purchased</th>
+            <th>Customer tax</th>
+            <th>Vendor tax</th>
+            <th></th>
+            
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Product) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                    @item.Type.ToString()
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalesPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CostPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanBeSold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CanBePurchased)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerTax.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VendorTax.Name)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
