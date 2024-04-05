@@ -20,16 +20,16 @@
                 @Html.DisplayNameFor(model => model.Tax[0].Description)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tax[0].ComputationValue)
+                Computation
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tax[0].IsActive)
+                Active
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tax[0].TypeValue)
+                Type
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Tax[0].ScopeValue)
+                Scope
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Tax[0].Amount)
@@ -47,16 +47,16 @@
                 @Html.DisplayFor(modelItem => item.Description)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ComputationValue)
+                    @item.Computation.ToString()
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.IsActive)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TypeValue)
+                @item.Type.ToString()
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ScopeValue)
+                    @item.Scope.ToString()
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Amount)

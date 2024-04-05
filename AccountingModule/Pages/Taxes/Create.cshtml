@@ -24,8 +24,13 @@
                 <span asp-validation-for="Tax.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Tax.ComputationValue" class="control-label"></label>
-                <input asp-for="Tax.ComputationValue" class="form-control" />
+                <label asp-for="Tax.ComputationValue" class="control-label">Computation</label>
+                <select asp-for="Tax.ComputationValue" class="form-control">
+                    @foreach (TaxComputationEnum type in Enum.GetValues(typeof(TaxComputationEnum)))
+                    {
+                        <option value="@((int)type)">@type</option>
+                    }
+                </select>
                 <span asp-validation-for="Tax.ComputationValue" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
@@ -34,13 +39,23 @@
                 </label>
             </div>
             <div class="form-group">
-                <label asp-for="Tax.TypeValue" class="control-label"></label>
-                <input asp-for="Tax.TypeValue" class="form-control" />
+                <label asp-for="Tax.TypeValue" class="control-label">Type</label>
+                <select asp-for="Tax.TypeValue" class="form-control">
+                    @foreach (TaxTypeEnum type in Enum.GetValues(typeof(TaxTypeEnum)))
+                    {
+                        <option value="@((int)type)">@type</option>
+                    }
+                </select>
                 <span asp-validation-for="Tax.TypeValue" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Tax.ScopeValue" class="control-label"></label>
-                <input asp-for="Tax.ScopeValue" class="form-control" />
+                <label asp-for="Tax.ScopeValue" class="control-label">Scope</label>
+                <select asp-for="Tax.ScopeValue" class="form-control">
+                    @foreach (TaxScopeEnum type in Enum.GetValues(typeof(TaxScopeEnum)))
+                    {
+                        <option value="@((int)type)">@type</option>
+                    }
+                </select>
                 <span asp-validation-for="Tax.ScopeValue" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -48,7 +63,7 @@
                 <input asp-for="Tax.Amount" class="form-control" />
                 <span asp-validation-for="Tax.Amount" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="padding-top: 10px;">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
