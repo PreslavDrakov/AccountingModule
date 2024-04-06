@@ -52,13 +52,14 @@
             Customer tax
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.CustomerTax.Description)
+            @Html.DisplayFor(model => model.Product.CustomerTax.Name): @Html.DisplayFor(model => model.Product.CustomerTax.Description)
         </dd>
+
         <dt class="col-sm-2">
             Vendor tax
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Product.VendorTax.Description)
+            @Html.DisplayFor(model => model.Product.VendorTax.Name): @Html.DisplayFor(model => model.Product.VendorTax.Description)
         </dd>
     </dl>
     
