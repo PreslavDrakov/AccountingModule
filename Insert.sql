@@ -5,26 +5,26 @@ SET IDENTITY_INSERT Tax ON;
 
 INSERT INTO Tax (ID, Name, Description, ComputationValue, IsActive, TypeValue, ScopeValue, Amount)
 VALUES
-    (1, 'Value Added Tax', 'Tax levied on the value added to a product or service at each stage of production or distribution.', 0, 1, 0, 0, 10.00),
-    (2, 'Sales Tax', 'Tax imposed on the sale of goods and services and is collected by the retailer.', 1, 1, 1, 1, 5.00),
-    (3, 'Income Tax', 'Tax levied on the earnings of individuals and businesses.', 2, 0, 2, 0, 0.05),
-    (4, 'Import Duty', 'Tax imposed on goods imported into a country.', 3, 1, 0, 1, 15.00),
-    (5, 'Excise Tax', 'Tax on certain goods produced or manufactured domestically.', 0, 0, 1, 0, 0.10),
-    (6, 'Property Tax', 'Tax levied on property, usually based on the value of the property.', 1, 1, 2, 1, 20.00),
-    (7, 'Corporate Tax', 'Tax levied on the profits of a corporation.', 2, 1, 0, 0, 0.02),
-    (8, 'Customs Duty', 'Tax imposed on goods when transported across international borders.', 3, 0, 1, 1, 8.00),
-    (9, 'Sin Tax', 'Tax on products that are deemed harmful to society.', 0, 1, 2, 0, 0.15),
-    (10, 'Capital Gains Tax', 'Tax on the profit from the sale of an asset.', 1, 0, 0, 1, 12.00),
-    (11, 'Payroll Tax', 'Tax withheld from employees wages by employers.', 2, 1, 1, 0, 0.07),
-    (12, 'Estate Tax', 'Tax imposed on the transfer of the estate of a deceased person.', 3, 0, 2, 1, 25.00),
+    (1, 'Value', 'Tax levied on the value added to a product or service at each stage of production or distribution.', 0, 1, 0, 0, 10.00),
+    (2, 'Sales', 'Tax imposed on the sale of goods and services and is collected by the retailer.', 1, 1, 1, 1, 5.00),
+    (3, 'Income', 'Tax levied on the earnings of individuals and businesses.', 2, 0, 2, 0, 0.05),
+    (4, 'Import', 'Tax imposed on goods imported into a country.', 3, 1, 0, 1, 15.00),
+    (5, 'Excise', 'Tax on certain goods produced or manufactured domestically.', 0, 0, 1, 0, 0.10),
+    (6, 'Property', 'Tax levied on property, usually based on the value of the property.', 1, 1, 2, 1, 20.00),
+    (7, 'Corporate', 'Tax levied on the profits of a corporation.', 2, 1, 0, 0, 0.02),
+    (8, 'Customs', 'Tax imposed on goods when transported across international borders.', 3, 0, 1, 1, 8.00),
+    (9, 'Sin', 'Tax on products that are deemed harmful to society.', 0, 1, 2, 0, 0.15),
+    (10, 'Capital', 'Tax on the profit from the sale of an asset.', 1, 0, 0, 1, 12.00),
+    (11, 'Payroll', 'Tax withheld from employees wages by employers.', 2, 1, 1, 0, 0.07),
+    (12, 'Estate', 'Tax imposed on the transfer of the estate of a deceased person.', 3, 0, 2, 1, 25.00),
     (13, 'Tariff', 'Tax on imported goods.', 0, 1, 0, 0, 0.03),
-    (14, 'Transfer', 'Tax imposed on the transfer of property, including real estate, securities, and other assets.', 1, 0, 1, 1, 18.00),
-    (15, 'Use Tax', 'Tax on the storage, use, or consumption of goods or services.', 2, 0, 2, 0, 0.20),
-    (16, 'Transfer Tax', 'Tax levied on the transfer of property, such as real estate.', 3, 1, 0, 1, 30.00),
-    (17, 'Poll Tax', 'Tax levied as a fixed sum on every liable individual.', 0, 0, 1, 0, 0.25),
-    (18, 'Carbon Tax', 'Tax on the carbon content of fuels.', 1, 1, 2, 1, 40.00),
-    (19, 'Value Added Tax', 'Tax levied on the value added to goods and services.', 2, 1, 0, 0, 0.05),
-    (20, 'Sales Tax', 'Tax imposed on the sale of goods and services.', 3, 0, 1, 1, 22.00);
+    (14, 'Transport', 'Tax imposed on the transfer of property, including real estate, securities, and other assets.', 1, 0, 1, 1, 18.00),
+    (15, 'Use', 'Tax on the storage, use, or consumption of goods or services.', 2, 0, 2, 0, 0.20),
+    (16, 'Transfer', 'Tax levied on the transfer of property, such as real estate.', 3, 1, 0, 1, 30.00),
+    (17, 'Poll', 'Tax levied as a fixed sum on every liable individual.', 0, 0, 1, 0, 0.25),
+    (18, 'Carbon', 'Tax on the carbon content of fuels.', 1, 1, 2, 1, 40.00),
+    (19, 'DDS', 'Tax levied on the value added to goods and services.', 2, 1, 0, 0, 0.05),
+    (20, 'Sales', 'Tax imposed on the sale of goods and services.', 3, 0, 1, 1, 22.00);
 
 SET IDENTITY_INSERT Tax OFF;
 SET IDENTITY_INSERT Product ON;
