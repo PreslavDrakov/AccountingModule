@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label asp-for="Product.TypeValue" class="control-label">Type</label>
                 <select asp-for="Product.TypeValue" class="form-control">
-                    <option value="">Please choose type</option>
+                    <option value="">Choose type</option>
                     @foreach (ProductTypesEnum type in Enum.GetValues(typeof(ProductTypesEnum)))
                     {
                         <option value="@((int)type)">@type</option>
@@ -52,7 +52,7 @@
             <div class="form-group">
                 <label asp-for="Product.CustomerTaxesID" class="control-label">Customer taxes</label>
                 <select asp-for="Product.CustomerTaxesID" class="form-control">
-                    <option value="">Please choose customer tax</option> 
+                    <option value="">Choose customer tax</option> 
                     @foreach (var item in ViewBag.CustomerTaxesID)
                     {
                         <option value="@item.Value">@item.Text</option>
@@ -63,7 +63,7 @@
             <div class="form-group">
                 <label asp-for="Product.VendorTaxesID" class="control-label">Vendor taxes</label>
                 <select asp-for="Product.VendorTaxesID" class="form-control">
-                    <option value="">Please choose vendor tax</option> <!-- Добавяне на първия елемент -->
+                    <option value="">Choose vendor tax</option> 
                     @foreach (var item in ViewBag.VendorTaxesID)
                     {
                         <option value="@item.Value">@item.Text</option>

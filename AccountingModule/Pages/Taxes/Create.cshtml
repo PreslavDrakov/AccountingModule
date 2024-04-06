@@ -26,6 +26,7 @@
             <div class="form-group">
                 <label asp-for="Tax.ComputationValue" class="control-label">Computation</label>
                 <select asp-for="Tax.ComputationValue" class="form-control">
+                    <option value="">Choose computation</option>
                     @foreach (TaxComputationEnum type in Enum.GetValues(typeof(TaxComputationEnum)))
                     {
                         <option value="@((int)type)">@type</option>
@@ -35,12 +36,13 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Tax.IsActive" /> @Html.DisplayNameFor(model => model.Tax.IsActive)
+                    <input class="form-check-input" asp-for="Tax.IsActive" /> Active
                 </label>
             </div>
             <div class="form-group">
                 <label asp-for="Tax.TypeValue" class="control-label">Type</label>
                 <select asp-for="Tax.TypeValue" class="form-control">
+                    <option value="">Choose type</option>
                     @foreach (TaxTypeEnum type in Enum.GetValues(typeof(TaxTypeEnum)))
                     {
                         <option value="@((int)type)">@type</option>
@@ -51,6 +53,7 @@
             <div class="form-group">
                 <label asp-for="Tax.ScopeValue" class="control-label">Scope</label>
                 <select asp-for="Tax.ScopeValue" class="form-control">
+                    <option value="">Choose scope</option>
                     @foreach (TaxScopeEnum type in Enum.GetValues(typeof(TaxScopeEnum)))
                     {
                         <option value="@((int)type)">@type</option>

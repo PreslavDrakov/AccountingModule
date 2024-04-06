@@ -8,27 +8,27 @@ namespace AccountingModule.Model
         [Key]
         public int ID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The field Name is required!")]
         [StringLength(255)]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The field Description is required!")]
         [StringLength(255)]
         public string Description { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please select computation!")]
         public int ComputationValue { get; set; }
 
         [Required]
         public bool IsActive { get; set; } = false;
 
-        [Required]
+        [Required(ErrorMessage = "Please select type!")]
         public int TypeValue { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please select scope!")]
         public int ScopeValue { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The field Description is required!")]
         public double Amount { get; set; }
 
         [NotMapped]
