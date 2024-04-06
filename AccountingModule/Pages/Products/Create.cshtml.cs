@@ -36,7 +36,7 @@ namespace AccountingModule.Pages.Products
             {
                 return Page();
             }
-
+            
             _context.Product.Add(Product);
             await _context.SaveChangesAsync();
 
