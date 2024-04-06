@@ -8,11 +8,11 @@ namespace AccountingModule.Model
         [Key]
         public int ID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The field Name is required!")]
         [StringLength(255)]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please select a type!")]
         public int TypeValue { get; set; }
 
         public double? SalesPrice { get; set; }
@@ -25,11 +25,11 @@ namespace AccountingModule.Model
         [Required]
         public bool CanBePurchased { get; set; }
         
-        [Required]
+        [Required(ErrorMessage = "Please select a customer tax!")]
         [ForeignKey("CustomerTax")]
         public int CustomerTaxesID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please select a vendor tax!")]
         [ForeignKey("VendorTax")]
         public int VendorTaxesID { get; set; }
 

@@ -41,12 +41,12 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Product.CanBeSold" /> @Html.DisplayNameFor(model => model.Product.CanBeSold)
+                    <input class="form-check-input" asp-for="Product.CanBeSold" /> Can be sold
                 </label>
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Product.CanBePurchased" /> @Html.DisplayNameFor(model => model.Product.CanBePurchased)
+                    <input class="form-check-input" asp-for="Product.CanBePurchased" /> Can be purchased
                 </label>
             </div>
             <div class="form-group">
@@ -58,6 +58,7 @@
                         <option value="@item.Value">@item.Text</option>
                     }
                 </select>
+                <span asp-validation-for="Product.CustomerTaxesID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Product.VendorTaxesID" class="control-label">Vendor taxes</label>
@@ -68,6 +69,7 @@
                         <option value="@item.Value">@item.Text</option>
                     }
                 </select>
+                <span asp-validation-for="Product.VendorTaxesID" class="text-danger"></span>
             </div>
             <div class="form-group" style="padding-top: 10px;">
                 <input type="submit" value="Create" class="btn btn-primary" />
